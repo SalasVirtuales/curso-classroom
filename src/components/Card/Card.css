@@ -84,3 +84,23 @@
 .tarjeta-modulo.clase:hover {
     background-color: #5A008F; /* Un tono ligeramente más oscuro al pasar el ratón */
 }
+
+/* Styles for React-Bootstrap Card variant (from feat/react-ui-implementation) */
+.rb-card-clase {
+    background-color: var(--color-principal) !important;
+    color: var(--color-texto-claro) !important;
+    height: 100%; /* Ensure it fills the column for consistent height */
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease; /* Added background-color transition */
+}
+
+.rb-card-clase .card-title { /* Assuming BootstrapCard.Title renders with .card-title */
+    color: var(--color-texto-claro) !important;
+    margin-bottom: 0; /* Remove default margin if any to help with centering */
+}
+
+.rb-card-clase:hover {
+    background-color: #5A008F !important; /* Lighter shade from original spec */
+    transform: translateY(-8px); /* Keep the hover effect */
+    box-shadow: 0 10px 20px var(--color-sombra-media); /* Keep shadow effect */
+}
