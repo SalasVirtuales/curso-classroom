@@ -1,0 +1,54 @@
+/* Contenedor principal para centrar el contenido */
+.contenedor-principal {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+/* Basic Grid Styles */
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -0.75rem; /* Adjust based on g-4 */
+    margin-left: -0.75rem;  /* Adjust based on g-4 */
+}
+
+/* g-4 utility */
+/* For flexbox containers, gap can be used directly.
+   However, for broader compatibility or if not using gap,
+   padding on columns is a common way to simulate gaps.
+   The .row margins are adjusted for this padding.
+*/
+.g-4 {
+    /* This is for direct children of a flex container if you use gap property */
+    /* gap: 1.5rem; */
+}
+
+/* Basic column padding to simulate g-4 effect */
+/* These paddings create the "gutters" between columns. */
+.col-12, .col-md-6, .col-lg-3, .col-lg-4 {
+    padding-right: 0.75rem; /* Half of 1.5rem */
+    padding-left: 0.75rem;  /* Half of 1.5rem */
+    margin-bottom: 1.5rem; /* Vertical spacing for items in a column flow or if rows wrap */
+                               /* This also helps simulate row gaps if not using direct gap property on a grid parent */
+}
+
+/* Widths for columns - simplified for brevity */
+.col-12 { width: 100%; }
+
+@media (min-width: 768px) { /* md breakpoint */
+    .col-md-6 { width: 50%; }
+}
+
+@media (min-width: 992px) { /* lg breakpoint */
+    .col-lg-3 { width: 25%; }
+    .col-lg-4 { width: 33.3333%; }
+}
+
+.justify-content-center {
+    justify-content: center;
+}
+
+/* Margin Utilities */
+.mt-5 { margin-top: 3rem !important; }
+.mb-5 { margin-bottom: 3rem !important; }

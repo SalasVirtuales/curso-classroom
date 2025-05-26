@@ -1,0 +1,41 @@
+/* Mensaje de Alerta Personalizado */
+.alerta-personalizada {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: var(--color-principal);
+    color: var(--color-texto-claro);
+    padding: 2rem 2.5rem;
+    border-radius: 1rem;
+    box-shadow: 0 10px 25px var(--color-sombra-media);
+    z-index: 1050;
+    /* display: none;  Visibility will be controlled by React */
+    text-align: center;
+    font-size: 1.3rem;
+    font-weight: 500;
+    animation: fadeIn 0.3s ease-out; /* Animación de aparición */
+}
+
+.alerta-personalizada .boton-cerrar {
+    background-color: var(--color-secundario);
+    color: var(--color-texto-claro);
+    border: none;
+    padding: 0.6rem 1.5rem;
+    border-radius: 0.6rem;
+    cursor: pointer;
+    margin-top: 1.5rem;
+    font-size: 1rem;
+    font-weight: 600;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.alerta-personalizada .boton-cerrar:hover {
+    background-color: #009ACD; /* Un azul ligeramente más oscuro */
+    transform: translateY(-2px);
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translate(-50%, -60%); }
+    to { opacity: 1; transform: translate(-50%, -50%); }
+}

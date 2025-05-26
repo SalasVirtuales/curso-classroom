@@ -1,0 +1,32 @@
+/* Pie de Página */
+.pie-pagina {
+    background-color: var(--color-fondo-oscuro);
+    color: var(--color-texto-claro);
+    padding: 2.5rem 0;
+    margin-top: 4rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    text-align: center; /* Ensure this is applied */
+}
+
+.pie-pagina .logo-pie {
+    height: 45px;
+    margin-right: 1rem;
+    border-radius: 0.5rem;
+}
+
+.pie-pagina .enlace-social {
+    color: var(--color-texto-claro);
+    font-size: 1.6rem;
+    margin: 0 0.8rem;
+    transition: color 0.3s ease;
+}
+
+.pie-pagina .enlace-social:hover {
+    color: var(--color-secundario);
+}
+
+.pie-pagina p {
+    margin-bottom: 0;
+    font-size: 0.95rem;
+    opacity: 0.8;
+}
