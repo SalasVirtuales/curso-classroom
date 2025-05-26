@@ -1,0 +1,106 @@
+/* Tarjetas de Contenido */
+.tarjeta-modulo {
+    background-color: var(--color-texto-claro);
+    border: none; /* Sin borde por defecto */
+    border-radius: 0.75rem;
+    box-shadow: 0 4px 12px var(--color-sombra-ligera);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 1.5rem;
+    position: relative; /* Para el efecto de fondo */
+    overflow: hidden;
+}
+
+.tarjeta-modulo::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, var(--color-principal) 0%, var(--color-secundario) 100%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 0;
+}
+
+.tarjeta-modulo:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 20px var(--color-sombra-media);
+}
+
+.tarjeta-modulo:hover::before {
+    opacity: 0.1; /* Ligero degradado al pasar el ratón */
+}
+
+.tarjeta-modulo .contenido-tarjeta {
+    position: relative;
+    z-index: 1; /* Asegura que el contenido esté por encima del pseudo-elemento */
+}
+
+.tarjeta-modulo .icono-tarjeta {
+    font-size: 3.5rem;
+    color: var(--color-secundario);
+    margin-bottom: 1rem;
+    transition: color 0.3s ease;
+}
+
+.tarjeta-modulo:hover .icono-tarjeta {
+    color: var(--color-principal); /* Cambia el color del icono al pasar el ratón */
+}
+
+.tarjeta-modulo .titulo-tarjeta {
+    font-size: 1.35rem;
+    font-weight: 600;
+    color: var(--color-texto-oscuro);
+    margin-bottom: 0;
+    transition: color 0.3s ease;
+}
+
+.tarjeta-modulo:hover .titulo-tarjeta {
+    color: var(--color-principal); /* Cambia el color del texto al pasar el ratón */
+}
+
+/* Estilos específicos para tarjetas de clase (con fondo principal) */
+.tarjeta-modulo.clase {
+    background-color: var(--color-principal);
+    color: var(--color-texto-claro);
+}
+
+.tarjeta-modulo.clase .icono-tarjeta {
+    color: var(--color-texto-claro); /* Icono blanco para tarjetas de clase */
+}
+
+.tarjeta-modulo.clase .titulo-tarjeta {
+    color: var(--color-texto-claro);
+}
+
+.tarjeta-modulo.clase:hover {
+    background-color: #5A008F; /* Un tono ligeramente más oscuro al pasar el ratón */
+}
+
+/* Styles for React-Bootstrap Card variant */
+.rb-card-clase {
+    background-color: var(--color-principal) !important;
+    color: var(--color-texto-claro) !important;
+    height: 100%; /* Ensure it fills the column for consistent height */
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease; /* Added background-color transition */
+}
+
+.rb-card-clase .card-title { /* Assuming BootstrapCard.Title renders with .card-title */
+    color: var(--color-texto-claro) !important;
+    margin-bottom: 0; /* Remove default margin if any to help with centering */
+}
+
+.rb-card-clase:hover {
+    background-color: #5A008F !important; /* Lighter shade from original spec */
+    transform: translateY(-8px); /* Keep the hover effect */
+    box-shadow: 0 10px 20px var(--color-sombra-media); /* Keep shadow effect */
+}

@@ -1,0 +1,22 @@
+.modal-options-container {
+    display: flex;
+    justify-content: space-around; /* Or space-between */
+    align-items: center;
+    padding: 1rem 0;
+}
+
+.modal-option-button {
+    display: flex;
+    flex-direction: column; /* Stack icon and text vertically */
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    min-width: 120px; /* Ensure buttons have some width */
+    font-size: 1rem;
+    /* Add transition for hover effects if desired */
+}
+
+.modal-option-button i {
+    font-size: 2rem; /* Larger icon */
+    margin-bottom: 0.5rem;
+}
