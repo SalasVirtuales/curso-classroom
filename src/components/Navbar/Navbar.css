@@ -1,0 +1,147 @@
+/* Barra de Navegación Personalizada */
+.barra-navegacion {
+    background-color: var(--color-fondo-oscuro);
+    box-shadow: 0 4px 8px var(--color-sombra-ligera);
+    padding: 0.75rem 0;
+}
+
+.barra-navegacion .marca-navegacion {
+    color: var(--color-texto-claro);
+    font-weight: 700;
+    font-size: 1.6rem;
+    display: flex;
+    align-items: center;
+}
+
+.barra-navegacion .marca-navegacion img {
+    border-radius: 50%; /* Icono redondo */
+    margin-right: 0.75rem;
+}
+
+.barra-navegacion .enlace-navegacion {
+    color: var(--color-texto-claro);
+    font-weight: 500;
+    padding: 0.6rem 1.2rem;
+    border-radius: 0.5rem; /* Bordes más redondeados */
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.barra-navegacion .enlace-navegacion:hover,
+.barra-navegacion .enlace-navegacion.activo {
+    background-color: var(--color-principal);
+    color: var(--color-texto-claro);
+}
+
+/* Estilos para contenedor principal si se necesita centrado o padding específico */
+.contenedor-principal {
+    /* Puedes añadir max-width y margin auto si quieres un contenedor centrado como en Bootstrap */
+    /* max-width: 1200px; */
+    /* margin-left: auto; */
+    /* margin-right: auto; */
+    /* padding-left: 1rem; */
+    /* padding-right: 1rem; */
+}
+
+/* Clases de Bootstrap que podrían necesitarse si no se usa el JS de Bootstrap, */
+/* o para asegurar que los estilos personalizados se apliquen correctamente. */
+/* Estas son solo un recordatorio y no necesariamente necesitan reglas CSS aquí si Bootstrap está cargado. */
+
+.navbar {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: .5rem;
+    padding-bottom: .5rem;
+}
+
+.navbar-expand-lg {
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+}
+
+.navbar-brand {
+    padding-top: .3125rem;
+    padding-bottom: .3125rem;
+    margin-right: 1rem;
+    font-size: 1.25rem;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+.navbar-toggler {
+    padding: .25rem .75rem;
+    font-size: 1.25rem;
+    line-height: 1;
+    background-color: transparent;
+    border: 1px solid transparent;
+    border-radius: .25rem;
+    transition: box-shadow .15s ease-in-out;
+}
+
+.navbar-toggler-icon {
+    display: inline-block;
+    width: 1.5em;
+    height: 1.5em;
+    vertical-align: middle;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+    /* Basic icon, Bootstrap uses an SVG */
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 0.55%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+.navbar-collapse {
+    flex-basis: 100%;
+    flex-grow: 1;
+    align-items: center;
+}
+
+.collapse:not(.show) {
+    display: none;
+}
+
+.navbar-nav {
+    display: flex;
+    flex-direction: column; /* Default for mobile */
+    padding-left: 0;
+    margin-bottom: 0;
+    list-style: none;
+}
+
+@media (min-width: 992px) { /* Corresponds to navbar-expand-lg breakpoint */
+    .navbar-expand-lg .navbar-nav {
+        flex-direction: row;
+    }
+    .navbar-expand-lg .navbar-toggler {
+        display: none;
+    }
+    .navbar-expand-lg .navbar-collapse {
+        display: flex !important; /* Override .collapse:not(.show) */
+        flex-basis: auto;
+    }
+}
+
+.ms-auto {
+    margin-left: auto !important;
+}
+
+.mb-2 {
+    margin-bottom: .5rem !important;
+}
+
+.mb-lg-0 {
+    margin-bottom: 0 !important;
+}
+
+.nav-item {
+    /* Estilos para nav-item si son necesarios */
+}
+
+.nav-link {
+    display: block;
+    padding: .5rem 1rem;
+    text-decoration: none;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out;
+}

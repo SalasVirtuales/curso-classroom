@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+/* Variables CSS para colores modernos y consistentes */
+:root {
+    --color-principal: #4A0072; /* Morado oscuro, inspirado en el logo */
+    --color-secundario: #00BFFF; /* Azul cielo, para acentos */
+    --color-fondo-claro: #F0F2F5; /* Gris muy claro para el fondo general */
+    --color-fondo-oscuro: #2C3E50; /* Azul oscuro casi negro para la barra y secciones */
+    --color-texto-claro: #FFFFFF;
+    --color-texto-oscuro: #333333;
+    --color-borde-suave: #E0E0E0;
+    --color-sombra-ligera: rgba(0, 0, 0, 0.08);
+    --color-sombra-media: rgba(0, 0, 0, 0.15);
+}
+
+body {
+    font-family: 'Inter', sans-serif; /* Consider adding a fallback font */
+    background-color: var(--color-fondo-claro);
+    color: var(--color-texto-oscuro);
+    line-height: 1.6;
+    margin: 0; /* Added to reset default browser margin */
+    padding: 0; /* Added to reset default browser padding */
+}

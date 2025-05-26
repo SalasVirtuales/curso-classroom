@@ -1,0 +1,38 @@
+/* Sección de Encabezado y Video */
+.seccion-encabezado {
+    background: linear-gradient(135deg, var(--color-principal) 0%, #6A1B9A 100%); /* Degradado moderno */
+    color: var(--color-texto-claro);
+    padding: 4rem 0;
+    margin-bottom: 2.5rem;
+    border-radius: 1rem; /* Bordes muy redondeados */
+    box-shadow: 0 8px 16px var(--color-sombra-media);
+    text-align: center;
+}
+
+.seccion-encabezado .titulo-pagina {
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+}
+
+.seccion-encabezado .marco-video {
+    background-color: rgba(0, 0, 0, 0.4); /* Fondo semi-transparente para el video */
+    width: 100%;
+    max-width: 900px;
+    aspect-ratio: 16 / 9; /* Proporción 16:9 para videos */
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0.75rem;
+    font-size: 2.5rem;
+    font-weight: 600;
+    overflow: hidden; /* Asegura que el contenido no se desborde */
+    position: relative;
+}
+
+.seccion-encabezado .marco-video span {
+    position: absolute;
+    z-index: 1; /* Asegura que el texto esté por encima de cualquier video real */
+}
