@@ -85,7 +85,7 @@
     background-color: #5A008F; /* Un tono ligeramente más oscuro al pasar el ratón */
 }
 
-/* Styles for React-Bootstrap Card variant */
+/* Styles for React-Bootstrap Card variant (from feat/react-ui-implementation) */
 .rb-card-clase {
     background-color: var(--color-principal) !important;
     color: var(--color-texto-claro) !important;
